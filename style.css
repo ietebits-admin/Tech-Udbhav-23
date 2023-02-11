@@ -54,7 +54,20 @@ nav .navLeft img {
     padding-top: 5px;
     width: 100px;
 }
-
+nav .navRight{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+nav .navRight a{
+    display: flex;
+    align-items: center;
+}
+nav .navRight img{
+    padding-top: 3.2px;
+    padding-right: 1rem;
+    width: 70px;
+}
 nav span {
     position: absolute;
     bottom: 0;
@@ -312,13 +325,20 @@ nav span {
     margin: 0 .5rem;
     background: linear-gradient(45deg, #0b1121, rgb(16, 171, 255));
     cursor: pointer;
+    transition: .5s;
 }
-
+.eventButtonsToBeClicked .primaryBtn:hover {
+    transform: scale(1.05);
+}
 .eventButtonsToBeClicked .secondaryBtn {
     padding: .5rem 1rem;
     margin: 0 .5rem;
     border: 2px solid rgb(16, 171, 255);
     cursor: pointer;
+    transition: .2s;
+}
+.eventButtonsToBeClicked .secondaryBtn:hover {
+    background: linear-gradient(45deg, #0b1121, rgb(16, 171, 255));
 }
 
 .eventSec {
@@ -516,6 +536,11 @@ footer .footerWrapper {
 footer .footerWrapper i {
     font-size: 1.5rem;
     margin: 1rem;
+    transition: .2s;
+}
+footer .footerWrapper i:hover {
+    transform: scale(1.1);
+    color: rgb(16, 171, 255);
 }
 
 @media (max-width: 750px) {
