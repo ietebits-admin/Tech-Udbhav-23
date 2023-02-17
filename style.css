@@ -745,17 +745,20 @@ figure div:nth-child(8):after {
 
 .circle1 span {
     font-size: 3.2rem;
-    font-family: 'Oswald', sans-serif;
+    font-family: w;
+    /* font-family: 'Oswald', sans-serif; */
 }
 
 .circle2 span {
     font-size: 2.7rem;
-    font-family: 'Oswald', sans-serif;
+    font-family: w;
+    /* font-family: 'Oswald', sans-serif; */
 }
 
 .circle3 span {
     font-size: 2.4rem;
-    font-family: 'Oswald', sans-serif;
+    font-family: w;
+    /* font-family: 'Oswald', sans-serif; */
 }
 
 @media (max-width: 750px) {
