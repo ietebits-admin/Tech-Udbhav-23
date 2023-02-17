@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Nanum+Myeongjo&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -7,7 +8,7 @@
 
 :root {
     --primary-text: #fff;
-    --primary-bg: #222;
+    --primary-bg:  rgb(10, 18, 30);
 }
 
 @font-face {
@@ -54,15 +55,18 @@ nav .navLeft img {
     padding-top: 5px;
     width: 100px;
 }
-nav .navRight{
+
+nav .navRight {
     display: flex;
     align-items: center;
     gap: 2rem;
 }
-nav .navRight a{
+
+nav .navRight a {
     display: flex;
     align-items: center;
 }
+
 nav span {
     position: absolute;
     bottom: 0;
@@ -77,6 +81,7 @@ nav span {
         left: 0;
         transform: translate(-100%);
     }
+
     100% {
         left: 100%;
         transform: translate(0%);
@@ -244,7 +249,7 @@ nav span {
     padding: 0 2rem 0 2rem;
 }
 
-.aboutEvent .heading {
+.heading {
     font-family: w;
     margin: 2rem 0 0 0;
     font-size: 3.2rem;
@@ -313,26 +318,30 @@ nav span {
 .eventButtonsToBeClicked {
     display: flex;
     font-size: .9rem;
+    gap: 1rem;
 }
 
 .eventButtonsToBeClicked .primaryBtn {
     padding: .5rem 1rem;
-    margin: 0 .5rem;
+    /* margin: 0 .5rem; */
     background: linear-gradient(45deg, #0b1121, rgb(16, 171, 255));
     cursor: pointer;
     transition: .5s;
 }
+
 .eventButtonsToBeClicked .primaryBtn:hover {
     transform: scale(1.05);
 }
-.eventButtonsToBeClicked .secondaryBtn {
+
+.secondaryBtn {
     padding: .5rem 1rem;
-    margin: 0 .5rem;
+    /* margin: 0 .5rem; */
     border: 2px solid rgb(16, 171, 255);
     cursor: pointer;
     transition: .2s;
 }
-.eventButtonsToBeClicked .secondaryBtn:hover {
+
+.secondaryBtn:hover {
     background: linear-gradient(45deg, #0b1121, rgb(16, 171, 255));
 }
 
@@ -406,9 +415,11 @@ nav span {
     0% {
         box-shadow: 0 0 8px 6px transparent, 0 0 0 0 transparent, 0 0 0 0 transparent;
     }
+
     10% {
         box-shadow: 0 0 8px 6px #86a3f8, 0 0 10px 10px transparent, 0 0 10px 5px #86a3f8;
     }
+
     80%,
     100% {
         box-shadow: 0 0 8px 6px transparent, 0 0 0 30px transparent, 0 0 0 30px transparent;
@@ -477,6 +488,7 @@ nav span {
     0% {
         transform: translateX(0);
     }
+
     100% {
         transform: translateX(-100%);
     }
@@ -533,15 +545,17 @@ footer .footerWrapper i {
     margin: 1rem;
     transition: .2s;
 }
+
 footer .footerWrapper i:hover {
     transform: scale(1.1);
     color: rgb(16, 171, 255);
 }
 
 /* preloader code */
-.preloader{
+.preloader {
     position: fixed;
-    top: 0; left: 0;
+    top: 0;
+    left: 0;
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -550,117 +564,339 @@ footer .footerWrapper i:hover {
     background-color: rgb(10, 18, 30);
     z-index: 10000;
 }
-figure{margin:0;transform:translate(-50%,-50%) rotate(0deg) scale(1.4,1.4);position:absolute;left:50%;top:50%;border-radius:150px;box-sizing:border-box;animation:rotation 20s infinite linear;}
 
-figure div:after{content:"";width:20px;height:20px;border:1px solid #fff;box-sizing:border-box;position:absolute;left:20px;top:20px;animation:shuffle 2s infinite;}
-
-figure div:nth-child(1){transform:rotate(0deg)}
-figure div:nth-child(1):after{animation-delay:-0.5s;}
-figure div:nth-child(2){transform:rotate(45deg)}
-figure div:nth-child(2):after{animation-delay:-1s;}
-figure div:nth-child(3){transform:rotate(90deg)}
-figure div:nth-child(3):after{animation-delay:-1.5s;}
-figure div:nth-child(4){transform:rotate(135deg)}
-figure div:nth-child(4):after{animation-delay:-2s;}
-figure div:nth-child(5){transform:rotate(180deg)}
-figure div:nth-child(5):after{animation-delay:-2.5s;}
-figure div:nth-child(6){transform:rotate(225deg)}
-figure div:nth-child(6):after{animation-delay:-3s;}
-figure div:nth-child(7){transform:rotate(270deg)}
-figure div:nth-child(7):after{animation-delay:-3.5s;}
-figure div:nth-child(8){transform:rotate(315deg)}
-figure div:nth-child(8):after{animation-delay:-4;}
-
-@keyframes rotation{
-  100%{transform:translate(-50%,-50%) rotate(-360deg) scale(1.4,1.4);}
+figure {
+    margin: 0;
+    transform: translate(-50%, -50%) rotate(0deg) scale(1.4, 1.4);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    border-radius: 150px;
+    box-sizing: border-box;
+    animation: rotation 20s infinite linear;
 }
-@keyframes shuffle{
-  50%{transform:scale(0.4,0.4) rotate(-90deg);border-radius:50%;}
+
+figure div:after {
+    content: "";
+    width: 20px;
+    height: 20px;
+    border: 1px solid #fff;
+    box-sizing: border-box;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    animation: shuffle 2s infinite;
+}
+
+figure div:nth-child(1) {
+    transform: rotate(0deg)
+}
+
+figure div:nth-child(1):after {
+    animation-delay: -0.5s;
+}
+
+figure div:nth-child(2) {
+    transform: rotate(45deg)
+}
+
+figure div:nth-child(2):after {
+    animation-delay: -1s;
+}
+
+figure div:nth-child(3) {
+    transform: rotate(90deg)
+}
+
+figure div:nth-child(3):after {
+    animation-delay: -1.5s;
+}
+
+figure div:nth-child(4) {
+    transform: rotate(135deg)
+}
+
+figure div:nth-child(4):after {
+    animation-delay: -2s;
+}
+
+figure div:nth-child(5) {
+    transform: rotate(180deg)
+}
+
+figure div:nth-child(5):after {
+    animation-delay: -2.5s;
+}
+
+figure div:nth-child(6) {
+    transform: rotate(225deg)
+}
+
+figure div:nth-child(6):after {
+    animation-delay: -3s;
+}
+
+figure div:nth-child(7) {
+    transform: rotate(270deg)
+}
+
+figure div:nth-child(7):after {
+    animation-delay: -3.5s;
+}
+
+figure div:nth-child(8) {
+    transform: rotate(315deg)
+}
+
+figure div:nth-child(8):after {
+    animation-delay: -4;
+}
+
+@keyframes rotation {
+    100% {
+        transform: translate(-50%, -50%) rotate(-360deg) scale(1.4, 1.4);
+    }
+}
+
+@keyframes shuffle {
+    50% {
+        transform: scale(0.4, 0.4) rotate(-90deg);
+        border-radius: 50%;
+    }
+}
+.mobileAbove{
+    display: none;
 }
 /* preloader code */
+.mobHero{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+.mobHero img{
+    width: 100%;
+    height: 100%;
+}
+.mobHeroWrap{
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 100%; height: 30vh;
+    background: linear-gradient(transparent, var(--primary-bg));
+    /* border: 5px solid #fff; */
+    z-index: 100;
+}
+.mobileAbout{
+    padding: 0 1rem 0rem 1rem;
+}
+.aboutWrap {
+    display: flex;
+    flex-direction: column;
+}
 
+.aboutWrap .left {
+    position: relative;
+    height: 350px; width: 100%;
+}
+
+.left .circle {
+    border: double 10px var(--primary-bg);
+    border-radius: 50%;
+    background-image: linear-gradient(var(--primary-bg), var(--primary-bg)), radial-gradient(circle at top left, #0b1121, rgb(16, 171, 255));
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.left .circle1 {
+    position: absolute;
+    top: 0;
+    left: 10rem;
+    width: 180px;
+    height: 180px;
+}
+
+.left .circle2 {
+    position: absolute;
+    top: 6rem;
+    left: 2rem;
+    width: 150px;
+    height: 150px;
+}
+
+.left .circle3 {
+    position: absolute;
+    top: 14rem;
+    left: 8rem;
+    width: 120px;
+    height: 120px;
+}
+
+.aboutWrap .right {
+    width: 100%;
+    padding: 0 1rem;
+    text-align: left;
+    background: rgba(85, 86, 88, 0.19);
+
+}
+
+.circle1 span {
+    font-size: 3.2rem;
+    font-family: 'Oswald', sans-serif;
+}
+
+.circle2 span {
+    font-size: 2.7rem;
+    font-family: 'Oswald', sans-serif;
+}
+
+.circle3 span {
+    font-size: 2.4rem;
+    font-family: 'Oswald', sans-serif;
+}
 
 @media (max-width: 750px) {
     .aboutEvent {
-        padding: 0 0rem 0 .5rem;
+        padding: 0rem 0rem 0rem 0rem;
     }
+
     .aboutIndividualEvent {
         flex-direction: column-reverse;
         align-items: center;
-        justify-content: center;
+        /* justify-content: center; */
         margin: 0 0 2rem 0;
-        padding: 2rem;
+        padding: 1rem;
     }
-    .aboutEventContent{
+
+    .aboutIndividualEvent .aboutEventContent {
         margin-right: 0;
     }
+
     .aboutEventName {
         font-size: 2rem;
     }
-    .bottomPoster{
+
+    .bottomPoster {
         display: none
     }
-    .topMainPoster{
-        width: 80%;
+
+    .topMainPoster {
+        align-items: center;
+        width: 100%;
+        padding: 0 2rem 1rem 2rem;
     }
-    .eventMinorImage{
+
+    .eventMinorImage {
         display: none;
     }
+
+    .eventButtonsToBeClicked {
+        flex-wrap: wrap;
+    }
+
+    .eventSec {
+        padding: 0 1rem 0 1rem;
+    }
+
+    .eventWrap {
+        padding-left: 3rem;
+        margin: 0 0 0 22.5px;
+    }
+
     .individualEvents .eventDate {
-        position: absolute;
-        left: -94px;
+        left: -75px;
         top: 25px;
         width: 60px;
         height: 60px;
         font-size: .9rem;
     }
+
     .individualEvents .eventDate span {
         padding-top: .8rem;
         font-size: 1.2rem;
         font-weight: 700;
         line-height: 1.2rem;
     }
+
     .individualEvents .eventTime {
-        margin-right: 1.5rem;
-        font-size: 1.1rem;
+        margin-right: .5rem;
+        font-size: 1.2rem;
     }
+
     .individualEvents .eventDescription .n {
-        margin-right: 2rem;
+        margin-right: .5rem;
         font-size: 1.2rem;
         font-family: w;
     }
-    .eventButtonsToBeClicked .primaryBtn {
-        padding: .4rem .8rem;
-        margin: 0 .35rem;
-        font-size: .5rem;
+
+    .sponser {
+        padding: 0 1rem 0 1rem;
     }
-    .eventButtonsToBeClicked .secondaryBtn {
-        padding: .4rem .8rem;
-        margin: 0 .35rem;
-        font-size: .5rem;
-    }
+
     .sponser .heading {
         font-size: 2rem;
     }
+
     .eventSec .heading {
         font-size: 2rem;
     }
+
     .aboutEvent .heading {
         font-size: 2rem;
     }
+
     .sponserSlider {
-        height: 5rem;
+        height: 6rem;
     }
+
     footer .footerWrapper {
         flex-direction: column;
         font-size: .9rem;
     }
+
     .footerWrapper .faq {
         max-width: 100%;
         min-width: 100%;
     }
+
     .footerWrapper .socialMedia {
         max-width: 100%;
         min-width: 100%;
+    }
+}
+
+@media (max-width: 550px) {
+    html{
+        overflow-x: hidden;
+    }
+    .heroWrapper {
+        display: none;
+    }
+
+    nav .navLeft {
+        font-family: w;
+        font-size: 1.5rem;
+        display: flex;
+        align-items: center;
+    }
+
+    nav .navLeft img {
+        padding-top: 5px;
+        width: 80px;
+    }
+
+    nav .navRight {
+        display: none;
+    }
+    
+    .mobileAbove{
+        display: initial;
+        padding: 2rem 1rem;
+    }
+    .mobileAbove{
+        display: initial;
     }
 }
