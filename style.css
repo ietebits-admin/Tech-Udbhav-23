@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Nanum+Myeongjo&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap');
 * {
     margin: 0;
     padding: 0;
@@ -378,7 +378,7 @@ nav span {
     left: 0;
     top: 0;
     width: 6px;
-    height: 30px;
+    height: 80%;
     background: linear-gradient(#0b1121, rgb(16, 171, 255));
 }
 
@@ -550,7 +550,24 @@ footer .footerWrapper i:hover {
     transform: scale(1.1);
     color: rgb(16, 171, 255);
 }
+.question{
+    margin-top: 4rem;
+    padding: 0 2rem;
+}
 
+.qHead{
+    font-weight: bold;
+}
+
+.qText{
+    background: rgba(85, 86, 88, 0.19);
+    margin: 1rem 0;
+    font-size: 1rem;
+    font-family: 'Courier Prime', monospace;
+}
+.ques{
+    margin: 1rem 0;
+}
 /* preloader code */
 .preloader {
     position: fixed;
